@@ -1,0 +1,76 @@
+/* App.css */
+
+/* Header */
+header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Logo */
+h1 {
+  margin: 0;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  gap: 10px;
+}
+
+/* Navbar Links */
+.navbar a {
+  text-decoration: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.navbar a:hover {
+  background-color: #14454f;
+}
+
+/* Buttons */
+button {
+  padding: 5px 10px;
+  background-color: #b139cf;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #777;
+}
+
+/* Form input fields */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Form submit button */
+input[type="submit"] {
+  background-color: #8ade8d;
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  border-radius: 40px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #72e678;
+}
