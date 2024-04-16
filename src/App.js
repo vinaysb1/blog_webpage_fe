@@ -7,6 +7,7 @@ import Home from './components/Home';
 import SignUp from './components/SignUp';
 import LogIn from './components/LogIn';
 import Dashboard from './components/Dashboard'
+import './App.css';
 
 const App = () => {
   return (

@@ -31,13 +31,13 @@ h1 {
 }
 
 .navbar a:hover {
-  background-color: #555;
+  background-color: #14454f;
 }
 
 /* Buttons */
 button {
   padding: 5px 10px;
-  background-color: #555;
+  background-color: #b139cf;
   color: #fff;
   border: none;
   cursor: pointer;
@@ -63,14 +63,14 @@ textarea {
 
 /* Form submit button */
 input[type="submit"] {
-  background-color: #4CAF50;
+  background-color: #8ade8d;
   color: white;
-  padding: 10px 20px;
+  padding: 15px 30px;
   border: none;
-  border-radius: 5px;
+  border-radius: 40px;
   cursor: pointer;
 }
 
 input[type="submit"]:hover {
-  background-color: #45a049;
+  background-color: #72e678;
 }

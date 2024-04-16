@@ -15,6 +15,7 @@ const Dashboard = () => {
   const fetchPosts = async () => {
     try {
       const token = sessionStorage.getItem('token'); // Retrieve the token from sessionStorage
+      console.log(token)
       const response = await axios.get('http://localhost:4001/api/posts', {
         headers: {
           Authorization: `Bearer ${token}` // Include the token in the request headers
