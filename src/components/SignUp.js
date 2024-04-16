@@ -22,7 +22,7 @@ const navigate = useNavigate();
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4001/api/signup', formData);
+      const response = await axios.post('https://blog-webpage-be.onrender.com/api/signup', formData);
       console.log(response.data); // Handle success response from the backend
      navigate('/login')
     } catch (error) {

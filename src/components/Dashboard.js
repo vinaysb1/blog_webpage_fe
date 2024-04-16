@@ -16,7 +16,7 @@ const Dashboard = () => {
     try {
       const token = sessionStorage.getItem('token'); // Retrieve the token from sessionStorage
       console.log(token)
-      const response = await axios.get('http://localhost:4001/api/posts', {
+      const response = await axios.get('https://blog-webpage-be.onrender.com/api/posts', {
         headers: {
           Authorization: `Bearer ${token}` // Include the token in the request headers
         }
@@ -31,7 +31,7 @@ const Dashboard = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post('http://localhost:4001/api/posts', { title, content, author });
+      const response = await axios.post('https://blog-webpage-be.onrender.com/api/posts', { title, content, author });
       setTitle('');
       setContent('');
       setAuthor('');
@@ -44,7 +44,7 @@ const Dashboard = () => {
 
   const handleDelete = async (postId) => {
     try {
-      await axios.delete(`http://localhost:4001/api/posts/${postId}`);
+      await axios.delete(`https://blog-webpage-be.onrender.com/api/posts/${postId}`);
       setPosts(posts.filter((post) => post.id !== postId));
     } catch (error) {
       console.error('Error deleting post:', error);
@@ -53,7 +53,7 @@ const Dashboard = () => {
 
   const handleUpdate = async (postId, updatedData) => {
     try {
-      const response = await axios.put(`http://localhost:4001/api/posts/${postId}`, updatedData);
+      const response = await axios.put(`https://blog-webpage-be.onrender.com/api/posts/${postId}`, updatedData);
       const updatedPost = response.data.post;
       setPosts(posts.map((post) => (post.id === postId ? updatedPost : post)));
       setEditingPostId(null); // Reset editing state
