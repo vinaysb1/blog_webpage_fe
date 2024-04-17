@@ -1,16 +1,16 @@
 import React from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useAuth } from './AuthContext';
 
 const Header = () => {
   const { isLoggedIn, logout } = useAuth();
-  const navigate = useNavigate();
+  
 
   return (
     <header>
       <h1>Blog App</h1>
       {isLoggedIn ? (
-        <button onClick={() => {logout(); navigate('/')}}>Sign Out</button>
+        <button onClick={logout}>Sign Out</button>
       ) : (
         <div>
           <Link to="/signup"><button>Sign Up</button></Link>
