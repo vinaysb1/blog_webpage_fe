@@ -23,11 +23,12 @@ const LogIn = () => {
         body: JSON.stringify(formData)
       });
       const data = await response.json();
+      debugger;
       if (response.ok) {
         // Login successful
         sessionStorage.setItem('token', data.token);
         login(data.token); // Call login function from useAuth hook
-        navigate('/login');
+        navigate('/dashboard');
       } else {
         // Login failed
         console.error('Login failed:', data.error);
