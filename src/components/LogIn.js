@@ -1,9 +1,10 @@
-// components/LogIn.js
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { useAuth } from './AuthContext'; // Import useAuth hook
 
 const LogIn = () => {
   const navigate = useNavigate();
+  const { login } = useAuth(); // Get login function from useAuth hook
   const [formData, setFormData] = useState({ email: '', password: '' });
 
   const handleChange = (e) => {
@@ -25,6 +26,7 @@ const LogIn = () => {
       if (response.ok) {
         // Login successful
         sessionStorage.setItem('token', data.token);
+        login(data.token); // Call login function from useAuth hook
         navigate('/dashboard');
       } else {
         // Login failed
