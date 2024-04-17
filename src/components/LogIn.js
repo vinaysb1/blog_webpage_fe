@@ -27,7 +27,7 @@ const LogIn = () => {
         // Login successful
         sessionStorage.setItem('token', data.token);
         login(data.token); // Call login function from useAuth hook
-        navigate('/dashboard');
+        navigate('/login');
       } else {
         // Login failed
         console.error('Login failed:', data.error);
